@@ -3,6 +3,8 @@ import os
 import numpy as np
 import math
 cap = cv2.VideoCapture(0)
+
+vezes = 0
      
 while(1):
         
@@ -127,9 +129,11 @@ while(1):
 
                    
                 else:
-                    cv2.putText(frame,'1 = Word',(0,50), font, 2, (0,0,255), 3, cv2.LINE_AA)
-                    #os.system("start WINWORD.EXE --window-size=600,400")
-                    #break
+                    cv2.putText(frame,'1 = Discord',(0,50), font, 2, (0,0,255), 3, cv2.LINE_AA)
+                    vezes += 1
+                    print(f'Tudo joia {vezes}')
+                    os.system('discord')
+                    break
                     
         elif l==2:
             cv2.putText(frame,'2 = Excel',(0,50), font, 2, (0,0,255), 3, cv2.LINE_AA)
